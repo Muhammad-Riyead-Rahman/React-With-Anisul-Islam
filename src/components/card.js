@@ -7,10 +7,7 @@ const monthName = date.getMonth();
 const currentYear = date.getFullYear();
 
 function Card(props) {
-  console.log(props);
   const { titleText, descText } = props;
-  //destructuring props
-
   return (
     <div className='card'>
       <h3 className='cardTitle'>{titleText}</h3>
