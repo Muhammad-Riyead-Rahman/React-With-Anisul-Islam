@@ -1,9 +1,11 @@
-import FAQS from "./components/FAQ/FAQS"
+import UseEffectExample from "./components/HOOKS/useEffect/UseEffectExample";
+import DataFetch from "./components/HOOKS/useEffect/DataFetch";
 
 function App() {
   return (
     <div>
-      <FAQS />
+      <UseEffectExample />
+      <DataFetch />
     </div>
   )
 }
