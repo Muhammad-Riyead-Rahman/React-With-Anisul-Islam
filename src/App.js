@@ -1,9 +1,9 @@
-import Users from './components/PropTypes/Users'
+import Signup from './components/Signup'
 
 function App() {
   return (
     <div>
-      <Users />
+      <Signup />
     </div>
   )
 }
