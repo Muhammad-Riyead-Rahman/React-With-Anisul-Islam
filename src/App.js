@@ -1,11 +1,13 @@
-import Signup from './components/Signup'
+import React from "react";
 
-function App() {
+import Home from "./components/Home";
+
+const App = () => {
   return (
-    <div>
-      <Signup />
-    </div>
-  )
-}
+    <>
+      <Home />
+    </>
+  );
+};
 
 export default App;
