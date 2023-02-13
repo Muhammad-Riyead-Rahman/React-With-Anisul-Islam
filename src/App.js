@@ -1,27 +1,36 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
-import Navbar from './Navbar/navbar';
-import Blog from './pages/Blog';
-import Blogs from './pages/Blogs';
-import BlogView from './pages/BlogView';
-import Contact from './pages/Contact';
-import Error from './pages/Error';
-import Home from './pages/Home';
+import React, { useCallback, useState } from 'react';
+import Message from './components/HOOKS/useCallbackUseMemomemo/Message';
 
 function App() {
+  const [count, setCount] = useState(0);
+  const [toggle, setToggle] = useState(false);
+
+  console.log("app rendering");
+
+  const handleIncrement = useCallback(() => {
+    setCount(count + 1);
+  }, [count])
+
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/blogs/:title" element={<BlogView />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
-    </BrowserRouter>
+    <div>
+      {toggle ? "on" : "off"}
+
+      <button onClick={() => {
+        setToggle(!toggle);
+      }}>Toggle</button>
+
+      <h1>Count: {count}</h1>
+
+      <button onClick={() => {
+        setCount((prevCount) => prevCount + 1)
+      }}>Increment</button>
+
+      <Message numberOfMessage={0} messageHandleIncrement={handleIncrement} />
+    </div>
   )
 }
 
 export default App;
+
+
+
