@@ -1,9 +1,9 @@
-import CONDITIONAL_RENDERING from './components/CONDITIONAL_RENDERING/index';
+import EVENT_HANDLING_CLASS from './components/EVENT_HANDLING_CLASS';
 
 function App() {
   return (
     <div>
-      <CONDITIONAL_RENDERING />
+      <EVENT_HANDLING_CLASS />
     </div>
   )
 }
