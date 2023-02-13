@@ -1,9 +1,9 @@
-import UserForm from "./components/HOOKS/UseRefExample/UserForm"
+import Component1 from "./components/HOOKS/useContext/Component1"
 
 function App() {
   return (
     <div>
-      <UserForm />
+      <Component1 />
     </div>
   )
 }
