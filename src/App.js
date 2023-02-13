@@ -1,14 +1,13 @@
-import ReactIcon from "./components/ReactIcon";
+import ReactBootstrap from "./components/ReactBootstrap";
+import "./index.css";
 
 function App() {
   return (
     <div>
-      <ReactIcon />
+      <ReactBootstrap />
     </div>
   )
 }
 
 export default App;
-
-
 
