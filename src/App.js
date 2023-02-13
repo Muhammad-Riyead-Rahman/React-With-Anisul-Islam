@@ -1,13 +1,37 @@
-import BookList from "./components/Hooks/useState/USESTATE_ARRAY/BookList"
-import USESTATE_OBJECT from "./components/Hooks/useState/USESTATE_OBJECT"
-import HOOKS_USESTATE from "./components/Hooks/useState/USESTATE_BASIC"
+import { useEffect, useState } from 'react';
+import "./App.css";
 
 function App() {
+  const error = true;
+
+  const [name, setName] = useState("");
+  const [validInput, setValidInput] = useState(false);
+
+  useEffect(() => {
+    if (name.length < 2) {
+      setValidInput(false);
+    } else {
+      setValidInput(true);
+    }
+  }, [name]);
+
+  const handleChange = (e) => {
+    setName(e.target.value);
+    console.log(e.target.value);
+    console.log(name);
+
+    // if (name.length < 2) {
+    //   setValidInput(false);
+    // } else {
+    //   setValidInput(true);
+    // }
+
+  }
+  
   return (
     <div>
-      <HOOKS_USESTATE />
-      <USESTATE_OBJECT />
-      <BookList />
+      <h1 style={{ color: error ? "red" : "green", backgroundColor: error ? "green" : "red" }}>Welcome</h1>
+      <input type="text" value={name} onChange={handleChange} style={{ backgroundColor: validInput ? "green" : "red" }} className={`${validInput ? "valid" : "invalid"}`} />
     </div>
   )
 }
