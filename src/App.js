@@ -1,37 +1,15 @@
-import { useEffect, useState } from 'react';
-import "./App.css";
+import FORM1 from "./components/Form/index1";
+import FORM2 from "./components/Form/index2";
+import FORM3 from "./components/Form/index3";
+import FORM4 from "./components/Form/index4";
 
 function App() {
-  const error = true;
-
-  const [name, setName] = useState("");
-  const [validInput, setValidInput] = useState(false);
-
-  useEffect(() => {
-    if (name.length < 2) {
-      setValidInput(false);
-    } else {
-      setValidInput(true);
-    }
-  }, [name]);
-
-  const handleChange = (e) => {
-    setName(e.target.value);
-    console.log(e.target.value);
-    console.log(name);
-
-    // if (name.length < 2) {
-    //   setValidInput(false);
-    // } else {
-    //   setValidInput(true);
-    // }
-
-  }
-  
   return (
     <div>
-      <h1 style={{ color: error ? "red" : "green", backgroundColor: error ? "green" : "red" }}>Welcome</h1>
-      <input type="text" value={name} onChange={handleChange} style={{ backgroundColor: validInput ? "green" : "red" }} className={`${validInput ? "valid" : "invalid"}`} />
+      <FORM1 />
+      <FORM2 />
+      <FORM3 />
+      <FORM4 />
     </div>
   )
 }
