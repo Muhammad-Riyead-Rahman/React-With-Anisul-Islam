@@ -11,14 +11,17 @@ export class EVENT_HANDLING_CLASS extends Component {
     }
 
     handleOnChange = (e) => {
-        console.log(e.target.value)
+        console.log(e.target.value);
+
         this.setState({
             searchValue : e.target.value
         }, () => {
-            console.log("Inside setState : " + this.state.searchValue)
+            console.log("Inside setState(callback-async) : " + this.state.searchValue)
         })
-        console.log("Outside setState : " + this.state.searchValue)
-        //console.log("Outside setState : " + e.target.value) //it's update the value instantly
+
+        console.log("Outside setState(not instant) : " + this.state.searchValue)
+        console.log("Outside setState(instant) : " + e.target.value)
+        // it's update the value instantly
     }
     
     handleSignUpClick = () =>{
