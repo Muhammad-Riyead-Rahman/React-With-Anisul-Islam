@@ -1,5 +1,5 @@
 import ReactBootstrap from "./components/ReactBootstrap";
-import "./index.css";
+import "./index.css"
 
 function App() {
   return (
@@ -10,4 +10,3 @@ function App() {
 }
 
 export default App;
-
