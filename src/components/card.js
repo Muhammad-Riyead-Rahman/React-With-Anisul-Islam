@@ -8,6 +8,7 @@ const currentYear = date.getFullYear();
 
 function Card(props) {
   const { titleText, descText } = props;
+  
   return (
     <div className='card'>
       <h3 className='cardTitle'>{titleText}</h3>
