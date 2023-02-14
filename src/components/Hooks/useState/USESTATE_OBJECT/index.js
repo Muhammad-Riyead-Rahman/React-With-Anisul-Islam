@@ -4,11 +4,9 @@ export default function USESTATE_OBJECT() {
   const [user, setUser] = useState({ userId: "", fullName: "" });
   const { userId, fullName } = user;
 
-
   const handleChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
-
 
   return (
     <div>
@@ -23,7 +21,7 @@ export default function USESTATE_OBJECT() {
         <input
           type="text"
           name="fullName"
-          //   value={user.fullName}
+          // value={user.fullName}
           value={fullName}
           onChange={handleChange}
         />
