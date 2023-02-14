@@ -7,7 +7,7 @@ function App() {
     <Card titleText="Call Mother" descText="This is desc1" />
     <Card titleText="Call Father" descText="This is desc2" />
     <Card titleText="Call Sister" descText="This is desc3" />
-    <Card titleText="call Home" descText="This is desc4" />
+    <Card titleText="Call Home" descText="This is desc4" />
   </div>
 }
 
