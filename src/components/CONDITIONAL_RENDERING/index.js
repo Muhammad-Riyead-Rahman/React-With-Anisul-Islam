@@ -5,7 +5,6 @@ import SignUpPage from './SignUpPage'
 
 
 class CONDITIONAL_RENDERING extends Component {
-
     constructor(props) {
         super(props)
     
@@ -13,12 +12,9 @@ class CONDITIONAL_RENDERING extends Component {
              isLoggedIn : false
         }
     }
-
-   
     
     render() {
-
-        const {isLoggedIn} = this.state
+        const { isLoggedIn } = this.state
         let element;
 
         /** conditional rending based on if-else */
@@ -30,9 +26,6 @@ class CONDITIONAL_RENDERING extends Component {
             }
         */
         
-        
-        
-
         //element variable rendering
        /*
             if(isLoggedIn){
@@ -61,4 +54,4 @@ class CONDITIONAL_RENDERING extends Component {
     }
 }
 
-export default CONDITIONAL_RENDERING
+export default CONDITIONAL_RENDERING;
