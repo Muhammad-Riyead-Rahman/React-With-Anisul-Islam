@@ -2,13 +2,11 @@ import React, { useState } from 'react'
 import './style.css'
 
 export default function FORM2() {
-
    const [user, setUser] = useState({
        name : '',
        email : '',
        password : ''
    })
-
    const {name, email, password} = user
 
     const handleNameChange = (e) =>{
