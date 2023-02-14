@@ -47,6 +47,7 @@ function App() {
       {todos.map((todo) => {
         console.log(todo)
         const { id, title, desc, phones } = todo;
+
         return (
           <div key={id}>
             <h3>{title}</h3>
@@ -69,6 +70,7 @@ function App() {
         const { id, title, desc, phones } = todo;
         console.log(phones)
         const [{ home }, { office }] = phones;
+        
         return (
           <div key={id}>
             <h3>{title}</h3>
