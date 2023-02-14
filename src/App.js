@@ -2,7 +2,6 @@ import Card from "./components/card";
 import "./index.css";
 import data from "./data.json";
 
-
 function App() {
   console.log(data);
   console.log(data[0].title + " " + data[0].desc);
@@ -26,9 +25,7 @@ function App() {
 
     {/* {items} */}
 
-
     {data.map((item, index) => <Card key={index} titleText={item.title} descText={item.desc} />)}
-    
   </div>
 }
 
