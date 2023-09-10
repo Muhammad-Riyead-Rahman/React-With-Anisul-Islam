@@ -17,9 +17,7 @@ root.render(
     <div className='card'>
       <h3 className='cardTitle'>{todoTitte}</h3>
       <p className='cardDesc'>{todoDesc}</p>
-      <p className='cardFooter'>
-        {dateName + "/" + monthName + "/" + currentYear}
-      </p>
+      <p className='cardFooter'>{`${dateName}/ ${monthName}/ ${currentYear}`}</p>
     </div>
   </div>
 );
