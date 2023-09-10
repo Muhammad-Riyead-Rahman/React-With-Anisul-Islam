@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 
 import style from "./newtodo.module.css";
+
+
 const NewTodo = (props) => {
   const [todo, setTodo] = useState({ title: "", desc: "" });
+
   const { title, desc } = todo;
 
   const handleChange = (event) => {
     const name = event.target.name;
+
     setTodo((oldTodo) => {
       return { ...oldTodo, [name]: event.target.value };
     });
@@ -14,6 +18,7 @@ const NewTodo = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    
     props.onAddTodo(todo);
     setTodo({ title: "", desc: "" });
   };
